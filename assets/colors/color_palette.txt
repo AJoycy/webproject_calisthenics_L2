@@ -1,0 +1,44 @@
+<MONOCHROMATIC PALETTE>
+| Color                     | Role                           |
+| ------------------------- | ------------------------------ |
+|  hsl(142, 100%, 20%)    | Primary brand color            |
+|  hsl(142, 71%, 14%)     | Hero/dark section background   |
+|  hsl(142, 50%, 37%)     | Button hover / secondary green |
+|  hsl(142, 70%, 68%)     | Accent/highlight color         |
+|  hsl(142, 100%, 83%)    | Soft accent backgrounds        |
+|  hsl(142, 100%, 92%)    | Very light green background    |
+
+<NEUTRAL COLORS>
+| Color                     | Role                           |
+| ------------------------- | ------------------------------ |
+|  hsl(163, 24%, 6%)      | Main website background        |
+|  hsl(160, 18%, 25%)     | Cards / navbar / surfaces      |
+|  hsl(215, 14%, 34%)     | Muted text / borders           |
+
+<TEXT COLORS>
+| Color                     | Role                           |
+| ------------------------- | ------------------------------ |
+|  hsl(150, 11%, 97%)     | Main readable text             |
+|  hsl(219, 11%, 65%)     | Secondary text                 |
+
+
+:root {
+    /* Primary Palette */
+    --color-primary: hsl(142, 100%, 20%); 
+    --color-section-bg: hsl(142, 71%, 14%);
+    
+    --color-secondary: hsl(142, 50%, 37%);
+    --color-highlight: hsl(142, 70%, 68%);
+    --color-accent-bg: hsl(142, 100%, 83%);
+    --color-light-bg: hsl(142, 100%, 97%);
+
+    /* Neutral Colors */
+    --color-dark-bg: hsl(163, 24%, 6%);
+    --color-cards: hsl(160, 18%, 25%);
+    --color-border: hsl(215, 14%, 25%);
+
+    /* Text Colors */
+    --color-muted-text: hsl(155, 10%, 45%);
+    --color-main-text: hsl(150, 11%, 97%);
+    --color-secondary-text: hsl(219, 11%, 65%);
+}

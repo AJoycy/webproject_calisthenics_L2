@@ -1,0 +1,268 @@
+@import url(scrollbar.css);
+
+/* General Settings - Universal Selector to use border-box instead of content-box */
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0; 
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--color-dark-bg);
+    color: var(--color-main-text);
+    /* margin & padding set to 0 makes everything fit */
+}
+
+html { /*ROOT SELECTOR*/
+    scroll-behavior: smooth;
+}
+
+/* COLOR SETTINGS */
+:root {
+    /* Primary Palette */
+    --color-primary: hsl(142, 100%, 20%); 
+    --color-section-bg: hsl(142, 71%, 14%);
+    
+    --color-secondary: hsl(142, 50%, 37%);
+    --color-highlight: hsl(142, 70%, 68%);
+    --color-accent-bg: hsl(142, 100%, 83%);
+    --color-light-bg: hsl(142, 100%, 97%);
+
+    /* Neutral Colors */
+    --color-dark-bg: hsl(163, 24%, 6%);
+    --color-cards: hsl(160, 18%, 25%);
+    --color-border: hsl(215, 14%, 25%);
+
+    /* Text Colors */
+    --color-muted-text: hsl(155, 10%, 45%);
+    --color-main-text: hsl(150, 11%, 97%);
+    --color-secondary-text: hsl(219, 11%, 65%);
+}
+
+header {   
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 25px;
+
+    background-color: var(--color-cards);
+    border-bottom: 1px solid var(--color-border);
+    position: fixed; 
+    z-index: 5; /* Sets navbar to appear more on top */
+}
+
+/* Navigation Links */
+.navlinks {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 60px;
+}
+
+.navlinks a {
+    text-decoration: none;
+    color: var(--color-main-text);
+    font-size: 14px;
+    font-style: italic;    
+}
+
+.navlinks a:hover {
+    color: var(--color-highlight); /* Makes links change color when we hover over it*/
+}
+
+/* Logo Class */
+.logo {
+
+}
+
+
+.hero {
+    padding: 80px 60px;
+}
+
+/* HERO TITLE */
+.hero-title {
+    font-size: 3rem;
+    font-style: italic;
+    letter-spacing: 4px;
+
+    margin-top: 120px;
+    margin-bottom: 45px;
+
+    color: var(--color-main-text);
+}
+
+.video-banner {
+    position: relative; /* Keeps video anchored to its initial layout location */
+    
+    width: 100%;
+    height: 600px;
+
+    overflow: hidden; /* Hides Extra whitespace*/
+
+    border-radius: 10px;
+
+    border: 1px solid var(--color-border);
+    z-index: -1;
+}
+
+.video-banner video {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover; /*Ensures the video fills the entire container*/
+}
+
+.video-banner::before { /* Makes text easier to read on a moving video */
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 100%;
+    text-align: center;
+    pointer-events: none;
+}
+
+.overlay-text > span {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    color: var(--color-main-text);
+    font-size: 2.6em;
+    font-weight: bold;
+    letter-spacing: 4px;
+    opacity: 0;
+}
+
+/* Animation */
+@keyframes textSlider {
+
+    0%{
+        opacity: 0;
+        transform: translate(-50%, 30px);
+    }
+    10% {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+    40% {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+    50% {
+        opacity: 0;
+        transform: translate(-50%, -30%);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -30px);
+    }
+}
+
+.text1 {
+    animation: textSlider 4s infinite;
+}
+.text2 {
+    animation: textSlider 4s infinite;
+    animation-delay: 2s;
+}
+
+/* End of animation */
+
+.start-now {
+    padding: 80px 60px;
+}
+
+.start-now h2 {
+    margin-bottom: 30px;
+    font-style: italic;
+    color: var(--color-main-text);
+    font-size: x-large;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    font-style: italic;
+    font-family: monospace;
+    font-size: 1.5em;
+}
+
+.card {
+    flex: 1;
+    background-color: var(--color-cards);
+    border: 1px solid var(--color-border);
+    border-radius: 15px;
+    min-height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-main-text);
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-highlight);
+    box-shadow: 0 0 15px rgba(115, 230, 157, 0.3);
+}
+
+/* Footer Content */
+.footer {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 30px 60px;
+    width: 100%;
+    margin-top: 80px;
+
+    background-color: var(--color-cards);
+    border-top: 1px solid var(--color-border);
+}
+
+.social-icons {
+    display: flex;
+    gap: 40px;
+}
+
+.social-icons i {
+    font-size: 2em;
+}
+
+.footer-links {
+    display: flex;
+    gap: 60px;
+}
+
+.footer > div > a {
+    text-decoration: none;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--color-primary-text);
+    transition: 0.2s;
+}
+
+a:hover {
+    color: var(--color-highlight);
+}
+/* End of Footer Content */
