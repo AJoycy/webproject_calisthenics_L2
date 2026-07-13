@@ -131,6 +131,10 @@ function valSubject() {
         clearMsg(subjectMsg, iSubject);
         return false;
     }
+    else if (subjectVal.trim().length > 50) {
+        displayErrorMsg(subjectField, subjectMsg, iSubject, "Too long!");
+        return false;
+    }
     else if (!PATTERN.test(subjectVal)) {
         displayErrorMsg(subjectField, subjectMsg, iSubject, "Invalid subject!");
         return false;
