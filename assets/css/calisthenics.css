@@ -650,7 +650,7 @@ aside .card{
     background-color:transparent;
     backdrop-filter:blur(6px);
 
-    border:2px solid var(--color-secondary);
+    border:2px solid hsla(171, 50%, 37%, 1);
     border-radius:14px;
 
     box-shadow:0 10px 25px rgba(0,0,0,.3);
