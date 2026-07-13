@@ -1,11 +1,369 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Start Calisthenics</title>
+
+        <!-- Favicon links -->
+        <link rel="icon" type="image/png" href="../../assets/icons/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="../../assets/icons/favicon.svg" />
+        <link rel="shortcut icon" href="../../assets/icons/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../assets/icons/apple-touch-icon.png" />
+        <link rel="manifest" href="../../assets/icons/site.webmanifest" />
+
+        <!-- Link to Bootstrap stylesheet -->
+        <link rel="stylesheet" href="../../bootstrap/css.bs/bootstrap.min.css">
+
+        <link rel="stylesheet" href="../../assets/css/custom_font.css">
+        <link rel="stylesheet" href="../../assets/css/calisthenics.css">
+        <link rel="stylesheet" href="../../assets/css/scrollbar.css">
+
+        <!-- Using Social Media Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+
+
+    <body>
+        <!-- Navbar Section -->
+        <header class="header">
+
+            <nav class="navbar navbar-expand-md"> <!-- Nav for the navbar -->
+                <div class="container">
+                    <!-- Hamburger Menu Button -->
+                    <button 
+                        class="navbar-toggler" 
+                        type="button" 
+                        data-bs-toggle="collapse" 
+                        data-bs-target="#mainNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="mainNavbar">
+                            <ul class="navbar-nav me-auto gap-5">  <!-- Navbar buttons-->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../../index.html">HOME</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../about.html">ABOUT</a>
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" 
+                                        href="../levels.html" 
+                                        aria-expanded="false">
+                                        LEVELS 
+                                    </a>
+
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a class="dropdown-item"
+                                            href="../levels/beginner.html">
+                                                Beginner
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a class="dropdown-item"
+                                            href="../levels/intermediate.html">
+                                                Intermediate
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a class="dropdown-item"
+                                            href="../levels/advanced.html">
+                                                Advanced
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" 
+                                        href="../exercises.html" 
+                                        aria-expanded="false">
+                                        EXERCISES
+                                    </a>
+
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a class="dropdown-item"
+                                            href="../exercises/push.html">
+                                                Push
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a class="dropdown-item"
+                                            href="../exercises/pull.html">
+                                                Pull
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a class="dropdown-item"
+                                            href="../exercises/core.html">
+                                                Core
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../equipment.html">EQUIPMENT</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../contactUs.html">CONTACT US</a>
+                                </li>
+                            </ul>
+                        
+                </div>
+            </nav>
+        </header>
+        <!-- End of Navbar Section -->
+
+
+        <!-- Main Body Content -->
+        <main class="container my-5 py-5 mt-5">
+            <!-- Hero -->
+            <section class="py-5 exercise-section">
+                <div class="text-center">
+                    <h1 class="display-4 fw-bold">Core Exercises</h1>
+                    
+                    <p class="lead mt-3">
+                        Your core is what makes your movements stable and controlled. 
+                        Everything goes through your core when you move. 
+                        A weak core means weak contractions, a strong core translates to 
+                        an easier time mastering advanced skills.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Exercises -->
+            <!-- Video 1: Banana holds  -->
+            <section class="py-5 exercise-section">
+                <h2 class="mb-4">Banana Holds</h2>
+                <div class="row align-items-center">
+
+                    <div class="col-lg-5">
+                        <video class="img-fluid rounder shadow" controls>
+                            <source src="../../assets/videos/banana-holds.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <!-- Text -->
+                    <div class="col-lg-6 offset-lg-1">
+                        <h4>Execution</h4>
+                        <p>
+                            Start laying on your back, then lift up arms and legs to take a banana shape. 
+                            Push your pelvis forward (anterior pelvic tilt).
+                            Stay as immobile as possible.
+                        </p>
+                        <h4 class="mt-4">Common Mistakes</h4>
+                        <ul>
+                            <li>Lower back not touching the floor</li>
+                        </ul>
+                        <h4 class="mt-4">Variations</h4>
+                        <ul>
+                            <li>Bent legs (as seen on video)</li>
+                            <li>Straightening legs separately (as on video)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Video 2: Core compression  -->
+            <section class="py-5 exercise-section">
+                <h2 class="mb-4">Core compression</h2>
+                <div class="row align-items-center">
+
+                    <div class="col-lg-5 offset-lg-1 order-lg-2">
+                        <video class="img-fluid rounder shadow" controls>
+                            <source src="../../assets/videos/core-compressions.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <!-- Text -->
+                    <div class="col-lg-6 order-lg-1">
+                        <h4>Execution</h4>
+                        <p>
+                            Start sitting on the floor with a straight back. Place hands slightly 
+                            before knee level. Now lift your legs and push the floor with your hands. 
+                            Focus on abdominal and hip flexor contractions. Keep knees straight.
+                        </p>
+                        <h4 class="mt-4">Common Mistakes</h4>
+                        <ul>
+                            <li>Rushing reps (stay slow)</li>
+                        </ul>
+                        <h4 class="mt-4">Variations</h4>
+                        <ul>
+                            <li>Single leg lift</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Video 3: Leg raises  -->
+            <section class="py-5 exercise-section">
+                <h2 class="mb-4">Leg raises</h2>
+                <div class="row align-items-center">
+
+                    <div class="col-lg-5">
+                        <video class="img-fluid rounder shadow" controls>
+                            <source src="../../assets/videos/leg-raises.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <!-- Text -->
+                    <div class="col-lg-6 offset-lg-1">
+                        <h4>Execution</h4>
+                        <p>
+                            Hang on a pull-up bar or between parallel bars in a dips position. 
+                            Push the bar away from you if on parallel bars. 
+                            Slowly lift straight legs as high as you can, descend as slow as possible, 
+                            keep a slight hip angle at the bottom instead of coming back straight down.
+                        </p>
+                        <h4 class="mt-4">Common Mistakes</h4>
+                        <ul>
+                            <li>Body swings</li>
+                        </ul>
+                        <h4 class="mt-4">Variations</h4>
+                        <ul>
+                            <li>Single legged</li>
+                            <li>Bent knees</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Video 4: lsit -->
+            <section class="py-5 exercise-section">
+                <h2 class="mb-4">L-Sit</h2>
+                <div class="row align-items-center">
+
+                    <div class="col-lg-5 offset-lg-1 order-lg-2">
+                        <video class="img-fluid rounder shadow" controls>
+                            <source src="../../assets/videos/l-sit.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <!-- Text -->
+                    <div class="col-lg-6 order-lg-1">
+                        <h4>Execution</h4>
+                        <p>
+                            Take a dip position between two surfaces. 
+                            Push shoulders down, extend toes and brace your belly. 
+                            Lift your legs in a L shape, hold until you can't anymore.
+                        </p>
+                        <h4 class="mt-4">Common Mistakes</h4>
+                        <ul>
+                            <li>Saggy shoulders</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Video 5: L-sit to tuck  -->
+            <section class="py-5 exercise-section">
+                <h2 class="mb-4">L-sit to tuck</h2>
+                <div class="row align-items-center">
+
+                    <div class="col-lg-5">
+                        <video class="img-fluid rounder shadow" controls>
+                            <source src="../../assets/videos/lsit-to-tuck.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <!-- Text -->
+                    <div class="col-lg-6 offset-lg-1">
+                        <h4>Execution</h4>
+                        <p>
+                            Same steps as an L-sit, but now we add dynamic movements. 
+                            Send legs backward in a controlled way, bend knees toward chest into 
+                            a Tuck-planche position, then go back to the starting L-sit. 
+                        </p>
+                        <h4 class="mt-4">Common Mistakes</h4>
+                        <ul>
+                            <li>Saggy shoulders</li>
+                            <li>Excessive swinging</li>
+                        </ul>
+                        <h4 class="mt-4">Variations</h4>
+                        <ul>
+                            <li>Progressively straighten legs to approach the</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-5">
+                <div class="text-center">
+                    <h2 class="mb-4">Explore More Exercises</h2>
+
+                    <div
+                        class="d-flex justify-content-center gap-3 flex-wrap">
+                        <a href="exercises.html" class="btn btn-outline-success">
+                            Back to Exercises
+                        </a>
+
+                        <a href="push.html" class="btn btn-outline-success">
+                            Push Exercises
+                        </a>
+
+                        <a href="pull.html" class="btn btn-outline-success">
+                            Pull Exercises
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        <!-- End of Main Body Content -->
+
+        <a href="#top" class="back-to-top">
+            Back-to-top
+        </a>
+        <!-- Footer Content -->
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-4 col-md-4 text-start">
+                        <!-- CSS Validator Icon -->
+                        <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank">
+                            <img src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" />
+                        </a>
+                    </div>
+                    <div class="col-4 col-md-4 text-center">
+                        <nav class="navbar justify-content-center">
+                            <div class="social-icons">
+                                <a href="https://www.youtube.com/@andrystrong1" target="_blank">
+                                    <i class="fa-brands fa-youtube"></i>
+                                </a>
+                                <a href="https://www.instagram.com/andry_strong/" target="_blank">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a href="https://www.facebook.com/andrystrongcoach/" target="_blank">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="col-4 col-md-4">
+                        <!-- Empty column to maintain balance -->
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End of Footer Content -->
+
+        <!-- Script for linking jquery for Bootstrap -->
+        <script src="../../bootstrap/js.bs/jquery-3.7.1.min.js"></script>
+
+        <!-- Adding js to Bootstrap -->
+        <script src="../../bootstrap/js.bs/bootstrap.min.js"></script>
+
+        <!-- Script for getting the date of latest updated -->
+        <script src="../../assets/js/lastupdated.js"></script>
+
+    </body>
 </html>

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Start Calisthenics</title>
+
+        <!-- Favicon links -->
+        <link rel="icon" type="image/png" href="../../assets/icons/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="../../assets/icons/favicon.svg" />
+        <link rel="shortcut icon" href="../../assets/icons/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../assets/icons/apple-touch-icon.png" />
+        <link rel="manifest" href="../../assets/icons/site.webmanifest" />
+
+        <!-- Link to Bootstrap stylesheet -->
+        <link rel="stylesheet" href="../../bootstrap/css.bs/bootstrap.min.css">
+
+        <link rel="stylesheet" href="../../assets/css/custom_font.css">
+        <link rel="stylesheet" href="../../assets/css/calisthenics.css">
+        <link rel="stylesheet" href="../../assets/css/scrollbar.css">
+
+        <!-- Using Social Media Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+
+
+    <body>
+        <!-- Navbar Section -->
+        <header class="header">
+
+            <nav class="navbar navbar-expand-md"> <!-- Nav for the navbar -->
+                <div class="container">
+                    <!-- Hamburger Menu Button -->
+                    <button 
+                        class="navbar-toggler" 
+                        type="button" 
+                        data-bs-toggle="collapse" 
+                        data-bs-target="#mainNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="mainNavbar">
+                            <ul class="navbar-nav me-auto gap-5">  <!-- Navbar buttons-->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../../index.html">HOME</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../about.html">ABOUT</a>
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" 
+                                        href="../levels.html" 
+                                        aria-expanded="false">
+                                        LEVELS 
+                                    </a>
+
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a class="dropdown-item"
+                                            href="../levels/beginner.html">
+                                                Beginner
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a class="dropdown-item"
+                                            href="../levels/intermediate.html">
+                                                Intermediate
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a class="dropdown-item"
+                                            href="../levels/advanced.html">
+                                                Advanced
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" 
+                                        href="../exercises.html" 
+                                        aria-expanded="false">
+                                        EXERCISES
+                                    </a>
+
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a class="dropdown-item"
+                                            href="../exercises/push.html">
+                                                Push
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a class="dropdown-item"
+                                            href="../exercises/pull.html">
+                                                Pull
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a class="dropdown-item"
+                                            href="../exercises/core.html">
+                                                Core
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../equipment.html">EQUIPMENT</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../contactUs.html">CONTACT US</a>
+                                </li>
+                            </ul>
+                        
+                </div>
+            </nav>
+        </header>
+        <!-- End of Navbar Section -->
+
+        <!-- Main Body Content -->
+        <main class="container my-5 py-5 mt-5">
+            <section class="pb-5">
+                <div class="text-end">
+                    <h1 class="display-4 fw-bold">Beginner Level</h1>
+
+                    <p class="lead mt-3">
+                        Build solid foundations! Develop proper technique and basic
+                        strengh first. You build your path to more advanced skills here.
+                    </p>
+
+                    <span class="badge bg-success fs-6 mt-2">
+                        Beginner
+                    </span>
+                </div>
+            </section>
+
+            <section class="py-5">
+                <div class="text-start mb-5">
+                    <h2>Recommended Beginner Milestones</h2>
+
+                    <p>
+                        These are some common skills beginners should aim to achieve
+                        before moving to the intermediate level.
+                    </p>    
+                </div>
+
+                <div class="row g-4">
+                    <!-- Skill 1 -->
+                    <div class="col-lg-4">
+                        <div class="card level-card h-100 shadow-sm"> 
+                            <video controls class="card-img-top">
+                                <source src="/assets/videos/l-sit.mp4" type="video/mp4">
+                            </video>
+
+                            <div class="card-body">
+                                <h5>L-Sit</h5>
+                                <p>
+                                    Develops core strength, hip flexibility
+                                    and body control.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Skill 2 -->
+                    <div class="col-lg-4">
+                        <div class="card level-card h-100 shadow-sm"> 
+                            <video controls class="card-img-top">
+                                <source src="/assets/videos/handstand.mp4" type="video/mp4">
+                            </video>
+
+                            <div class="card-body">
+                                <h5>Handstand</h5>
+                                <p>
+                                    Greater balance, shoulder stability, spacial 
+                                    awareness.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Skill 3 -->
+                    <div class="col-lg-4">
+                        <div class="card level-card h-100 shadow-sm"> 
+                            <video controls class="card-img-top">
+                                <source src="/assets/videos/pull-up.mp4" type="video/mp4">
+                            </video>
+
+                            <div class="card-body">
+                                <h5>Pull-ups</h5>
+                                <p>
+                                    Builds baseline pulling power, develops your back, 
+                                    prepares for future more incredible skills.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Workout samples  -->
+            <section class="py-5">
+                <div class="text-start mb-5">
+                    <h2>Sample Beginner Workout</h2>
+                    <p>
+                        Right here we have 2 simple examples of how a 
+                        beginner could structure their weekly training.
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Table  1 -->
+                    <div class="col-lg-6"> 
+                        <h4 class="text-center mb-3">Routine</h4>
+                        
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Exercises</th>
+                                        <th>Sets</th>
+                                        <th>Reps</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>Push-ups</td>
+                                        <td>4</td>
+                                        <td>Max - 2</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Australian Pull-ups</td>
+                                        <td>3</td>
+                                        <td>Max - 2</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>L-Sit Compressions</td>
+                                        <td>5</td>
+                                        <td>12 (Increase as needed)</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Dips</td>
+                                        <td>4</td>
+                                        <td>Max - 2</td>
+                                    </tr>
+                                </tbody>
+
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Table 2 -->
+                    <div class="col-lg-6">
+                        <h4 class="text-center mb-3">Weekly Split</h4>
+
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Day</th>
+                                        <th>Focus</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>Day 1</td>
+                                        <td>Push</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Day 2</td>
+                                        <td>Pull + Core</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Day 3</td>
+                                        <td>Rest</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Day 4</td>
+                                        <td>Legs</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Day 5</td>
+                                        <td>Push + Core</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Day 6</td>
+                                        <td>Rest</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Day 7</td>
+                                        <td>Pull</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Day 8</td>
+                                        <td>Push + Core</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+                
+            <!-- Training tips  -->
+            <section class="py-5">
+                <div class="text-start mb-5">
+                    <h2>Training Guidelines</h2>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card level-card h-100">
+                            <div class="card-body text-start">
+                                <h5>Proper Form</h5>
+                                <p>
+                                    Form > Reps | The quality of the movements matters 
+                                    more than their quantity.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card level-card h-100">
+                            <div class="card-body text-start">
+                                <h5>Consistency</h5>
+                                <p>
+                                    Consistency > Occasional limit-pushing. Doing regular 
+                                    training will take you further than pushing very hard 
+                                    once in a while.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card level-card h-100">
+                            <div class="card-body text-start">
+                                <h5>Recovery</h5>
+                                <p>
+                                    Take rest! Rest is as important as training. Your body can 
+                                    only get stronger during your rest.
+                                    Neglected recovery will ineluctably lead to injury and progress 
+                                    stalling.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card level-card h-100">
+                            <div class="card-body text-start">
+                                <h5>Progressive Overload</h5>
+                                <p>
+                                    You need to periodically challenge yourself and move up in 
+                                    training intensity/difficulty. Staying in the comfort zone will 
+                                    only keep you where you are.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-5">
+                <aside class="p-4 rounded shadow-sm">
+                    <h3>Beginner Tip</h3>
+                    <p>
+                        Do not rush! Foundations are the most important, 
+                        you can not progress without mastering them first. 
+                        Celebrate small improvements, and take patience - 
+                        it is going to be long :)
+                    </p>
+                </aside>
+            </section>
+
+            <section class="py-5 text-center">
+                <h2 class="mb-4">Continue your journey</h2>
+
+                <div class="d-flex flex-wrap justify-content-center gap-3">
+                    <a href="../levels.html" class="btn btn-outline-success">
+                        Back to Levels
+                    </a>
+
+                    <a href="intermediate.html" class="btn btn-outline-success">
+                        Intermediate
+                    </a>
+
+                    <a href="advanced.html" class="btn btn-outline-success">
+                        Advanced
+                    </a>
+                </div>
+            </section>
+        </main>
+        <!-- End of Main Body Content -->
+
+        <a href="#top" class="back-to-top">
+            Back-to-top
+        </a>
+        <!-- Footer Content -->
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-4 col-md-4 text-start">
+                        <!-- CSS Validator Icon -->
+                        <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank">
+                            <img src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" />
+                        </a>
+                    </div>
+                    <div class="col-4 col-md-4 text-center">
+                        <nav class="navbar justify-content-center">
+                            <div class="social-icons">
+                                <a href="https://www.youtube.com/@andrystrong1" target="_blank">
+                                    <i class="fa-brands fa-youtube"></i>
+                                </a>
+                                <a href="https://www.instagram.com/andry_strong/" target="_blank">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a href="https://www.facebook.com/andrystrongcoach/" target="_blank">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="col-4 col-md-4">
+                        <!-- Empty column to maintain balance -->
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End of Footer Content -->
+
+        <!-- Script for linking jquery for Bootstrap -->
+        <script src="../../bootstrap/js.bs/jquery-3.7.1.min.js"></script>
+
+        <!-- Adding js to Bootstrap -->
+        <script src="../../bootstrap/js.bs/bootstrap.min.js"></script>
+
+        <!-- Script for getting the date of latest updated -->
+        <script src="../../assets/js/lastupdated.js"></script>
+    </body>
+</html>

@@ -1,11 +1,405 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Start Calisthenics</title>
+
+        <!-- Favicon links -->
+        <link rel="icon" type="image/png" href="../assets/icons/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg" />
+        <link rel="shortcut icon" href="../assets/icons/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png" />
+        <link rel="manifest" href="../assets/icons/site.webmanifest" />
+
+        <!-- Link to Bootstrap stylesheet -->
+        <link rel="stylesheet" href="../bootstrap/css.bs/bootstrap.min.css">
+
+        <link rel="stylesheet" href="../assets/css/custom_font.css">
+        <link rel="stylesheet" href="../assets/css/calisthenics.css">
+        <link rel="stylesheet" href="../assets/css/scrollbar.css">
+
+        <!-- Using Social Media Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+
+
+    <body>
+        <!-- Navbar Section -->
+        <header class="header">
+
+            <nav class="navbar navbar-expand-md"> <!-- Nav for the navbar -->
+                <div class="container">
+                    <!-- Hamburger Menu Button -->
+                    <button 
+                        class="navbar-toggler" 
+                        type="button" 
+                        data-bs-toggle="collapse" 
+                        data-bs-target="#mainNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="mainNavbar">
+                            <ul class="navbar-nav me-auto gap-5">  <!-- Navbar buttons-->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../index.html">HOME</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="about.html">ABOUT</a>
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" 
+                                        href="levels.html" 
+                                        aria-expanded="false">
+                                        LEVELS 
+                                    </a>
+
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a class="dropdown-item"
+                                            href="./levels/beginner.html">
+                                                Beginner
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a class="dropdown-item"
+                                            href="./levels/intermediate.html">
+                                                Intermediate
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a class="dropdown-item"
+                                            href="./levels/advanced.html">
+                                                Advanced
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" 
+                                        href="exercises.html" 
+                                        aria-expanded="false">
+                                        EXERCISES
+                                    </a>
+
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a class="dropdown-item"
+                                            href="./exercises/push.html">
+                                                Push
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a class="dropdown-item"
+                                            href="./exercises/pull.html">
+                                                Pull
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a class="dropdown-item"
+                                            href="./exercises/core.html">
+                                                Core
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="equipment.html">EQUIPMENT</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contactUs.html">CONTACT US</a>
+                                </li>
+                            </ul>
+                        
+                </div>
+            </nav>
+        </header>
+        <!-- End of Navbar Section -->
+
+
+        <!-- Main Body Content -->
+        <main class="container my-5 py-5 mt-5">
+            <!-- Page Introduction -->
+            <div class="row mb-4 text-center">
+                <div class="col"> <!-- col class for the 2 column layout-->
+                    <h1>Get in Touch</h1>
+                    <p class="lead">
+                        Any questions on calisthenics feedback? Fill in the form below.<br>
+                        We'd love to hear from you!
+                    </p>
+                </div>
+            </div>
+
+            <!-- Main content of Contact Us -->
+            <div class="row g-4">
+                <!-- LEFT COLUMN (Form) -->
+                <div class="col-12 col-lg-7">
+                    <div class="level-card card shadow-sm">
+                        <div class="card-body">
+                            <!-- Actual form  -->
+                            <h3 style="color: var(--color-main-text);" class="mb-5">Contact Us</h3>
+                            <form
+                                id="contactForm"
+                                method="post">
+                                <!-- Row 1 of form -->
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="mb-3 text-start">
+                                            <label for="fnametxt" class="form-label">
+                                                First name
+                                            </label>
+                                            <div class="input-group">
+                                                <input
+                                                    type="text"
+                                                    class="form-control"
+                                                    name="fnametxt"
+                                                    id="fnametxt">
+                                                <span class="input-group-text">
+                                                    <img id="ifname" class="validation-icon d-none" src="">
+                                                </span>
+                                            </div>
+                                            <span id="fnamemsg"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="mb-3 text-start">
+                                            <label for="lnametxt" class="form-label">
+                                                Last name
+                                            </label>
+                                            <div class="input-group">
+                                                <input
+                                                    type="text"
+                                                    class="form-control"
+                                                    name="lnametxt"
+                                                    id="lnametxt">
+                                                <span class="input-group-text">
+                                                    <img id="ilname" class="validation-icon d-none" src="">
+                                                </span>
+                                            </div>
+                                            <span id="lnamemsg"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Row 2 of form -->
+                                <div class="row g-3">
+                                    <div class="col-12">
+                                        <div class="mb-3 text-start">
+                                            <label for="emailtxt" class="form-label">
+                                                Email
+                                            </label>
+                                            <div class="input-group">
+                                                <input
+                                                    type="text"
+                                                    class="form-control"
+                                                    name="emailtxt"
+                                                    id="emailtxt">
+                                                
+                                                <span class="input-group-text">
+                                                    <img id="iemail" class="validation-icon d-none" src="">
+                                                </span>
+                                            </div>
+                                            <span id="emailmsg"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Row 3 of form -->
+                                <div class="row g-3">
+                                    <div class="col-12">
+                                        <div class="mb-3 text-start">
+                                            <label for="phonetxt" class="form-label">
+                                                Mobile number
+                                            </label>
+                                            <div class="input-group">
+                                                <input
+                                                    type="text"
+                                                    class="form-control"
+                                                    name="phonetxt"
+                                                    id="phonetxt">
+                                                <span class="input-group-text">
+                                                    <img id="iphone" class="validation-icon d-none" src="">
+                                                </span>
+                                            </div>
+                                            <span id="phonemsg"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Row 4 of form -->
+                                <div class="row g-3">
+                                    <div class="col-12">
+                                        <div class="mb-3 text-start">
+                                            <label for="subjecttxt" class="form-label">
+                                                Subject
+                                            </label>
+                                            <div class="input-group">
+                                                <input
+                                                    type="text"
+                                                    class="form-control"
+                                                    name="subjectxt"
+                                                    id="subjecttxt">
+                                                <span class="input-group-text">
+                                                    <img id="isubject" class="validation-icon d-none" src="">
+                                                </span>
+                                            </div>
+                                            <span id="subjectmsg"></span>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Row 5 of form -->
+                                <div class="row g-3">
+                                    <div class="col-12">
+                                        <div class="mb-3 text-start">
+                                            <label for="messagetxt" class="form-label">
+                                                Message
+                                            </label>
+                                            <div class="input-group">
+                                                <input
+                                                    type="text"
+                                                    class="form-control"
+                                                    name="messagetxt"
+                                                    id="messagetxt">
+                                                <span class="input-group-text">
+                                                    <img id="imessage" class="validation-icon d-none" src="">
+                                                </span>
+                                            </div>
+                                            <span id="messagemsg"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Row 6 of form -->
+                                <div class="row g-3 mt-4">
+                                    <div class="col text-end">
+                                        <!-- Reset button -->
+                                        <button type="reset" class="btn btn-primary">
+                                            Reset
+                                        </button>
+
+                                        <!-- Submit button -->
+                                        <button type="submit" class="btn btn-secondary">
+                                            Submit
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT COLUMN -->
+                <div class="col-12 col-lg-5">
+                    <!-- About card -->
+                    <div class="card level-card">
+                        <div class="card-body text-start">
+                            <h3>About This Project</h3>
+                            <p>
+                                This website was developed as part of a project in
+                                the second year of the BSc Cyber Security programme
+                                at <strong>University of Technology, Mauritius.</strong>
+                                <br> You can learn more about the Cyber Security 
+                                programme <a href="https://www.utm.ac.mu/courses/bsc-hons-cyber-security/" target="_blank"><u>here</u></a>.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- University Location + Google maps -->
+                    <div class="card level-card">
+                        <div class="card-body text-start">
+                            <h3>University Location</h3>
+                            <div class="ratio ratio-4x3">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744.9707537517097!2d57.464444975311295!3d-20.176943181267678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x217c515b0e4151cd%3A0x2c3fc4e25bb92a4b!2sUniversity%20of%20Technology%2C%20Mauritius!5e0!3m2!1sen!2smu!4v1783802736573!5m2!1sen!2smu"
+                                    style="border:0;"
+                                    allowfullscreen=""
+                                    loading="lazy"
+                                    referrerpolicy="strict-origin-when-cross-origin">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Audio Message -->
+                    <div class="card level-card">
+                        <div class="card-body text-start">
+                            <audio controls class="w-100">
+                                <source src="../assets/audio/audio-calisthenics.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </main>
+        <!-- End of Main Body Content -->
+        <div class="container pt-5">
+                <div class="row">
+                    <hr>
+                    <p class="lead">
+                        Made by A. Joycy<br>
+                    </p>
+                    <a href="mailto:anjarasoajoycy482@gmail.com">anjarasoajoycy482@gmail.com</a>
+                </div>
+            </div>
+
+        <!-- Footer Content -->
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-4 col-md-4 text-start">
+                        <!-- CSS Validator Icon -->
+                        <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank">
+                            <img src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" />
+                        </a>
+                    </div>
+                    <div class="col-4 col-md-4 text-center">
+                        <nav class="navbar justify-content-center">
+                            <div class="social-icons">
+                                <a href="https://www.youtube.com/@andrystrong1" target="_blank">
+                                    <i class="fa-brands fa-youtube"></i>
+                                </a>
+                                <a href="https://www.instagram.com/andry_strong/" target="_blank">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a href="https://www.facebook.com/andrystrongcoach/" target="_blank">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="col-4 col-md-4">
+                        <!-- Empty column to maintain balance -->
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End of Footer Content -->
+
+        <!-- Script for linking jquery for Bootstrap -->
+        <script src="../bootstrap/js.bs/jquery-3.7.1.min.js"></script>
+
+        <!-- Adding js to Bootstrap -->
+        <script src="../bootstrap/js.bs/bootstrap.min.js"></script>
+
+        <!-- Script for getting the date of latest updated -->
+        <script src="../assets/js/lastupdated.js"></script>
+        <!-- Script for form field validation -->
+        <script src="../assets/js/formvali.js"></script>
+    </body>
 </html>

@@ -8,15 +8,36 @@
 body {
     margin: 0; 
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
     background-color: var(--color-dark-bg);
     color: var(--color-main-text);
+    overflow-x: hidden;
     /* margin & padding set to 0 makes everything fit */
+    min-height: 100vh;
+    display:flex;
+    flex-direction:column;
+    height:100%;
+    padding-top: 110px;
 }
 
 html { /*ROOT SELECTOR*/
     scroll-behavior: smooth;
 }
+
+html, body {
+    height:100%;
+}
+
+main{
+    flex:1;
+    padding-bottom: 50px;
+}
+
+header, footer {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+
 
 /* COLOR SETTINGS */
 :root {
@@ -24,14 +45,14 @@ html { /*ROOT SELECTOR*/
     --color-primary: hsl(142, 100%, 20%); 
     --color-section-bg: hsl(142, 71%, 14%);
     
-    --color-secondary: hsl(142, 50%, 37%);
+    --color-secondary: hsla(154, 50%, 44%, 0.9);
     --color-highlight: hsl(142, 70%, 68%);
     --color-accent-bg: hsl(142, 100%, 83%);
     --color-light-bg: hsl(142, 100%, 97%);
 
     /* Neutral Colors */
     --color-dark-bg: hsl(163, 24%, 6%);
-    --color-cards: hsl(160, 18%, 25%);
+    --color-cards: hsla(162, 79%, 36%, 0.212);
     --color-border: hsl(215, 14%, 25%);
 
     /* Text Colors */
@@ -40,68 +61,70 @@ html { /*ROOT SELECTOR*/
     --color-secondary-text: hsl(219, 11%, 65%);
 }
 
-header {   
-    display: flex;
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald Stencil', 'Impact', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+strong, b {
+    font-weight: bold;
+}
+
+.header {   
     width: 100%;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 15px 25px;
-
-    background-color: var(--color-cards);
+    top: 0;
+    left: 0;
+    background-color: var(--color-secondary);
     border-bottom: 1px solid var(--color-border);
     position: fixed; 
     z-index: 5; /* Sets navbar to appear more on top */
+
+    height: 90px;
 }
 
 /* Navigation Links */
-.navlinks {
-    justify-content: space-between;
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    gap: 60px;
+.navbar { /* Boostrap Class */
+    padding: 25px 0;
 }
 
-.navlinks a {
-    text-decoration: none;
+.nav-link { /* Boostrap Class */
     color: var(--color-main-text);
-    font-size: 14px;
-    font-style: italic;    
+    font-size: 1em;
+    font-style: italic;
+    text-decoration: none;
 }
 
-.navlinks a:hover {
-    color: var(--color-highlight); /* Makes links change color when we hover over it*/
+.nav-link:hover {
+    color: var(--color-section-bg); /* Makes links change color when we hover over it*/
+    transform: translateY(-5px) translateX(2px);
+    border-color: var(--color-accent-bg);
+    shadow: 0 0 15px rgba(115, 230, 157, 0.3);
 }
-
-/* Logo Class */
-.logo {
-
-}
-
 
 .hero {
-    padding: 80px 60px;
+    padding: 60px 40px 0;
+    width: 100%;
 }
 
 /* HERO TITLE */
 .hero-title {
-    font-size: 3rem;
+    font-size: clamp(1.8rem, 5vw, 3rem);
     font-style: italic;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
 
-    margin-top: 120px;
-    margin-bottom: 45px;
+    margin-top: 100px;
+    margin-bottom: 30px;
 
     color: var(--color-main-text);
+    word-wrap: break-word; /* Prevents overflow */
 }
 
 .video-banner {
     position: relative; /* Keeps video anchored to its initial layout location */
     
     width: 100%;
-    height: 600px;
+    height: clamp(300px, 50vw, 600px); /* Responsive Height */
 
     overflow: hidden; /* Hides Extra whitespace*/
 
@@ -141,12 +164,15 @@ header {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    width: 100%;
+    width: 90%;
     color: var(--color-main-text);
-    font-size: 2.6em;
+    font-size: clamp(1.2rem, 4vw, 2.6rem); /* Responsive font size */
     font-weight: bold;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
     opacity: 0;
+    text-align: center;
+    word-wrap: break-word;
+    padding: 0 10px;
 }
 
 /* Animation */
@@ -185,23 +211,15 @@ header {
 /* End of animation */
 
 .start-now {
-    padding: 80px 60px;
+    padding: 40px 0 60px 0;
+    width: 100%;
 }
 
 .start-now h2 {
-    margin-bottom: 30px;
     font-style: italic;
     color: var(--color-main-text);
-    font-size: x-large;
-}
-
-.card-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    font-style: italic;
-    font-family: monospace;
-    font-size: 1.5em;
+    font-size: clamp(1.5rem, 3vw, 2rem); /* Responsive */
+    margin-bottom: 20px; /* Added margin-bottom */
 }
 
 .card {
@@ -209,39 +227,67 @@ header {
     background-color: var(--color-cards);
     border: 1px solid var(--color-border);
     border-radius: 15px;
-    min-height: 180px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    min-height: clamp(80px, 15vw, 180px); /* Responsive height */
     text-decoration: none;
     color: var(--color-main-text);
-    transition: 0.2s;
+    transition: 0.5s;
+    font-style: italic;
+    font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;
+    font-size: clamp(0.9rem, 2vw, 1.5rem); /* Responsive font */
+    text-align: center;
+    padding: 20px; /* Override Bootstrap's p-4 on mobile */
+    word-wrap: break-word;
+    line-height: 1.4;
 }
 
-.card:hover {
+.card:hover, .btn:hover, .beginner:hover, .intermediate:hover, .advanced:hover {
     transform: translateY(-5px);
-    border-color: var(--color-highlight);
+    border-color: var(--color-accent-bg);
     box-shadow: 0 0 15px rgba(115, 230, 157, 0.3);
+}
+
+.btn {
+    color: var(--color-light-bg)
+}
+
+/* Tablet and mobile specific card adjustments */
+@media (max-width: 768px) {
+    .card {
+        min-height: 80px; /* Shorter on mobile */
+        font-size: 1.1rem; /* Readable size on mobile */
+        padding: 15px;
+    }
+    
+    .start-now {
+        padding: 20px 0 40px 0;
+    }
 }
 
 /* Footer Content */
 .footer {
-    display: flex;
-
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 30px 60px;
     width: 100%;
-    margin-top: 80px;
+    margin-top: 80px; 
 
-    background-color: var(--color-cards);
+    background-color: var(--color-secondary);
     border-top: 1px solid var(--color-border);
+}
+
+.footer .container {
+    padding: 0;
+}
+
+.footer .navbar {
+    display: flex;
+    justify-content: center;
+    padding: 25px 0;
+    width: 100%;
 }
 
 .social-icons {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     gap: 40px;
 }
 
@@ -249,20 +295,289 @@ header {
     font-size: 2em;
 }
 
-.footer-links {
-    display: flex;
-    gap: 60px;
-}
-
-.footer > div > a {
+.footer a {
     text-decoration: none;
     font-style: italic;
     font-size: 14px;
-    color: var(--color-primary-text);
+    color: var(--color-main-text);
     transition: 0.2s;
 }
 
 a:hover {
     color: var(--color-highlight);
 }
-/* End of Footer Content */
+
+a {
+    color: var(--color-main-text);
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: var(--color-section-bg)
+} 
+/* End of Footer Content */ 
+
+article .card,
+aside .card{
+    border: none;
+    border-radius: 18px;
+}
+
+.card-body{
+    padding:2rem;
+}
+
+.card h2, .card h3, .card h4{
+    color:var(--color-secondary-text);
+}
+
+
+/* LEVELS CSS SECTION */
+.level-button {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    height:170px;
+
+    border-radius:60px;
+    text-decoration:none;
+
+    color:white;
+    font-size:1.7rem;
+    font-weight:bold;
+
+    overflow:hidden;
+    position:relative;
+    transition:.3s;
+}
+
+/* class for beginner button */
+.beginner {
+    background-image:url("../images/beginner-btncover.webp");
+    background-size:cover;
+    background-position:center;
+    color: var(--color-main-text);
+}
+
+/* class for advanced button */
+.advanced {
+    background-image:url("../images/advanced-btncover.webp");
+    background-size:cover;
+    background-position:center;
+    color: var(--color-main-text);
+}
+
+/* class for intermediate button */
+.intermediate {
+    background-image:url("../images/intermediate-btncover.webp");
+    background-size:cover;
+    background-position:center;
+    color: var(--color-main-text);
+}
+
+.level-button::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.45);
+}
+
+.level-button span{
+    position:relative;
+    z-index:2;
+}
+
+.level-button:hover{
+    transform:scale(1.03);
+}
+
+.level-card {
+    background: transparent;
+    border: none;
+}
+
+.level-card:hover {
+    box-shadow: none;
+}
+/* END OF LEVELS */
+
+/* EXERCISES CSS SECTION  */
+.exercise-card {
+    display: block;
+    color: white;
+}
+
+.exercise-image{
+    height:260px;
+    border-radius:12px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background-size:cover;
+    background-position:center;
+
+    position:relative;
+
+    overflow:hidden;
+    transition:.3s;
+}
+
+.exercise-image::before{
+    content:"";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.40); /* adds transparency */
+}
+
+.exercise-image h2 {
+    position: relative;
+    z-index: 1;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.exercise-text {
+    margin-top: 18px;
+    text-align: center;
+    color: #ddd;
+}
+
+.exercise-card:hover .exercise-image {
+    transform: translateY(-6px);
+}
+
+.push-image {
+    background-image:url("../images/push-btncover.webp");
+}
+
+.pull-image {
+    background-image:url("../images/pull-btncover.webp");
+}
+
+.core-image {
+    background-image:url("../images/core-btncover.webp");
+}
+/* END OF EXERCISES CSS */
+
+.btn-primary {
+    background-color: hsla(0, 100%, 50%, 0.5);
+    border-color: black;
+}
+
+.btn-secondary {
+    background-color: hsla(142, 98%, 38%, 0.5);
+    border-color: black;
+}
+
+.validation-icon {
+    width: 25px;
+    height: 25px;
+}
+
+
+/* Workout Cards */
+.workout-card {
+    background: hsl(160, 18%, 25%);
+    border-left: 6px solid hsl(142, 100%, 20%);
+    border-radius: 15px;
+
+    padding: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.25);
+    height: 100%;
+}
+
+.workout-card h3 {
+    color: white;
+    font-weight: 700;
+}
+
+.workout-subtitle {
+    color: #cfd8dc;
+    margin-bottom: 25px;
+}
+
+/* Exercise Section */
+.exercise-section {
+    padding: 4rem 0;
+}
+
+.exercise-section:not(:last-of-type) {
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+/* Back to Top Button */
+
+.back-to-top {
+    position: fixed;
+
+    bottom: 25px;
+    right: 25px;
+
+    background-color: white;
+    color: rgba(15, 18, 16, 1);
+
+    text-decoration: none;
+
+    padding: 0.8rem 1.2rem;
+    border-radius: 40px;
+
+    font-weight: 600;
+
+    box-shadow: 0 6px 18px rgba(0,0,0,.3);
+
+    transition: all .3s ease;
+    z-index: 999;
+}
+
+@media (max-width: 768px) {
+    .back-to-top {
+        bottom: 80px;
+        right: 5px;
+    }
+}
+
+.back-to-top:hover {
+    background-color: hsla(175, 100%, 58%, 0.736);
+    color: white;
+    transform: translateY(-3px);
+}
+
+.dropdown-menu {
+    background-color: hsla(143, 60%, 30%, 0.626);
+
+    border: none;
+
+    border-radius: 12px;
+
+    padding: .5rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,.3);
+}
+
+.dropdown-item {
+    color: white;
+    border-radius: 8px;
+    transition: .2s;
+}
+
+.dropdown-item:hover {
+    background-color: hsla(171, 50%, 37%, 0.578);
+    color: white;
+}
+
+.dropdown-toggle::after {
+    margin-left: .5rem;
+}
+
+@media (min-width: 768px) {
+    .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+    }
+
+    .dropdown:hover > .dropdown-menu{
+        display:block;
+    }
+}
