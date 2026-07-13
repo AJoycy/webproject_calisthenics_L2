@@ -6,7 +6,7 @@ function showLastUpdated(){
         year: "numeric"
     })
 
-    document.getElementById("lastupdated").textContent = "Page last updated 18 on: " + formattedDate;
+    document.getElementById("lastupdated").textContent = "Page last updated on: " + formattedDate;
 }
 
 window.addEventListener("load", showLastUpdated);
