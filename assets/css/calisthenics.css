@@ -96,10 +96,12 @@ strong, b {
 }
 
 .nav-link:hover {
-    color: var(--color-section-bg); /* Makes links change color when we hover over it*/
+    /* background-color: var(--color-section-bg); */
     transform: translateY(-5px) translateX(2px);
-    border-color: var(--color-accent-bg);
-    shadow: 0 0 15px rgba(115, 230, 157, 0.3);
+    /* border-color: var(--color-section-bg); */
+    box-shadow: 0px 0px 1px 1px black;
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px; */
+    border-radius: 10px;
 }
 
 .hero {
@@ -222,6 +224,11 @@ strong, b {
     margin-bottom: 20px; /* Added margin-bottom */
 }
 
+.logo {
+    width: 100px;
+    height: auto;
+}
+
 .card {
     flex: 1;
     background-color: var(--color-cards);
@@ -250,8 +257,18 @@ strong, b {
     color: var(--color-light-bg)
 }
 
+
 /* Tablet and mobile specific card adjustments */
 @media (max-width: 768px) {
+    .logo {
+        width: 70px;
+        height: auto;
+    }
+
+    .footer-text {
+        font-size: small;
+    }
+
     .card {
         min-height: 80px; /* Shorter on mobile */
         font-size: 1.1rem; /* Readable size on mobile */
@@ -260,6 +277,47 @@ strong, b {
     
     .start-now {
         padding: 20px 0 40px 0;
+    }
+
+    .navbar-collapse {
+        background-color: hsla(180, 100%, 2%, 0.886);
+        border-radius: 10px;
+        padding: 0;
+        margin-top: 15px;
+    }   
+
+    .navbar-nav {
+        gap: 5px;
+    }
+
+    .nav-link {
+        font-size: 1em;
+        padding: 10px
+    }
+
+    .dropdown-menu {
+        width: 180px;
+        min-width: 180px;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+        border-radius: 12px;
+        margin-top: 5px;
+    }
+
+    .dropdown {
+        position: relative;
+    }
+
+    .dropdown-item {
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
+    .dropdown-menu.show {
+        display: block;
     }
 }
 
@@ -546,7 +604,7 @@ aside .card{
 }
 
 .dropdown-menu {
-    background-color: hsla(143, 60%, 30%, 0.626);
+    background-color: hsla(142, 70%, 39%, 0.626);
 
     border: none;
 
